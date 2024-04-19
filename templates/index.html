@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Face Detection</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Face Detection </h1>
+        
+        <!-- Add GIF here -->
+        <img src="{{ url_for('static', filename='detection.gif') }}" alt="Loading" class="loading-gif">
+
+        <div class="options">
+            <a href="/add"><button>Add New Person</button></a>
+            <a href="/detect"><button>Find Relationship</button></a>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

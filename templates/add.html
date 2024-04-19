@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add Person</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Add New Person</h1>
+        
+        <!-- Loading GIF -->
+        <img src="{{ url_for('static', filename='upload.gif') }}" alt="Loading" class="loading-gif" id="loading-gif">
+
+        <!-- Pop-up message -->
+        <div class="popup-message" id="popup-message">
+            <p id="message-text"></p>
+        </div>
+
+        <form action="/add" method="post" enctype="multipart/form-data" id="add-form">
+            <!-- Name Input Field -->
+            <div class="input-group">
+                
+                <input type="text" name="name" id="name" placeholder="Name" required>
+            </div>
+
+            <!-- Details Input Field -->
+            <div class="input-group">
+                
+                <textarea name="details" id="details" placeholder="Details" required></textarea>
+            </div>
+
+            <!-- Image Upload Field -->
+            <div class="input-group">
+               
+                <input type="file" name="image" id="image" required>
+            </div>
+
+            <!-- Submit Button -->
+            <button type="submit" >Add Person</button>
+        </form>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
